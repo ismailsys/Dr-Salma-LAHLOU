@@ -6,7 +6,6 @@ import {
   BadgeCheck,
   Brain,
   CalendarDays,
-  Check,
   ChevronDown,
   Clock3,
   GraduationCap,
