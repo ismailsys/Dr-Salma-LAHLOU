@@ -131,6 +131,37 @@ html.has-motion .reveal-item.is-in{opacity:1;transform:translateY(0)}
   *,*:before,*:after{scroll-behavior:auto!important;transition:none!important}
 }
 
+
+/* Formation block: authentic cabinet photography with deliberate framing */
+.about-visual{min-height:520px;padding:0;background:#dce7f3;isolation:isolate}
+.about-photo{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:49% 43%;z-index:-1;transition:transform .75s cubic-bezier(.2,.8,.2,1),filter .4s}
+.about-visual:hover .about-photo{transform:scale(1.025);filter:saturate(.96)}
+.about-visual:before{display:none}
+.about-visual:after{content:"";position:absolute;inset:0;width:auto;height:auto;right:0;bottom:0;border:0;border-radius:inherit;background:linear-gradient(180deg,rgba(16,43,77,0) 42%,rgba(16,43,77,.24) 100%);box-shadow:none;pointer-events:none;z-index:0}
+.about-seal{top:24px;left:24px;z-index:2;padding:8px 13px;border:1px solid rgba(255,255,255,.8);border-radius:999px;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);box-shadow:0 8px 24px rgba(24,62,112,.08)}
+.about-seal>span{width:42px;height:42px;background:#fff;border-color:#dce4ee}
+.about-seal small{font-size:8px;letter-spacing:.13em}
+.about-quote{z-index:2;left:24px;right:24px;bottom:24px;padding:19px 22px;border:1px solid rgba(255,255,255,.85);background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-radius:16px}
+.about-quote p{font-size:17px;line-height:1.45;letter-spacing:-.025em}
+.photo-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+.photo-gallery figure{aspect-ratio:1.12/1}
+.photo-gallery img{object-position:center}
+@media(max-width:900px){
+ .about-visual{min-height:460px}
+ .photo-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:650px){
+ .about-visual{min-height:380px}
+ .about-photo{object-position:49% 42%}
+ .about-seal{left:16px;top:16px;padding:6px 10px}
+ .about-seal>span{width:36px;height:36px}
+ .about-quote{left:15px;right:15px;bottom:15px;padding:16px 17px}
+ .about-quote p{font-size:15px}
+ .photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .photo-gallery figure{aspect-ratio:1/1}
+}
+@media(prefers-reduced-motion:reduce){.about-photo{transition:none!important}}
+
 </style>
 </head>
 <body>
@@ -161,13 +192,12 @@ html.has-motion .reveal-item.is-in{opacity:1;transform:translateY(0)}
 
 </div></section>
 
-<section class="section section-soft" id="photos"><div class="container"><div class="section-head center"><span class="kicker">Galerie</span><h2>Photos du profil</h2><p>Images du profil du cabinet. Pour les informations de rendez-vous, contactez directement le cabinet.</p></div><div class="photo-gallery">
-<figure><img src="unnamed%20(1).webp" alt="Photo du profil du Dr Salma Lahlou" loading="lazy"></figure>
-<figure><img src="unnamed%20(2).webp" alt="Photo du profil du Dr Salma Lahlou" loading="lazy"></figure>
-<figure><img src="unnamed%20(3).webp" alt="Photo du profil du Dr Salma Lahlou" loading="lazy"></figure>
-<figure><img src="unnamed%20(4).webp" alt="Photo du profil du Dr Salma Lahlou" loading="lazy"></figure>
+<section class="section section-soft" id="photos"><div class="container"><div class="section-head center"><span class="kicker">Le cabinet</span><h2>Un aperçu des espaces</h2><p>Découvrez quelques espaces du cabinet avant votre venue.</p></div><div class="photo-gallery">
+<figure><img src="unnamed%20(1).webp" alt="Espace d’attente du cabinet" loading="lazy" decoding="async"></figure>
+<figure><img src="unnamed%20(2).webp" alt="Salle d’examen du cabinet" loading="lazy" decoding="async"></figure>
+<figure><img src="unnamed%20(3).webp" alt="Accueil du cabinet" loading="lazy" decoding="async"></figure>
 </div></div></section>
-<section class="section" id="parcours"><div class="container about-grid"><div class="about-visual"><div class="about-seal"><span>SL</span><small>NEUROCHIRURGIE<br>CASABLANCA</small></div><div class="about-quote"><p>Spécialité et formation médicale du Dr Salma Lahlou.</p></div></div><div class="about-copy"><span class="kicker">Spécialité & diplômes</span><h2>Neurochirurgie · Formation médicale</h2><p>Conformément aux informations figurant sur la carte de visite du Dr Salma Lahlou, voici sa spécialité et les diplômes indiqués.</p><div class="credentials"><div class="credential"><span class="check">✓</span><div><strong>Spécialité : neurochirurgie</strong><span>Spécialiste en chirurgie du cerveau et des nerfs</span></div></div><div class="credential"><span class="check">✓</span><div><strong>Faculté de Médecine et de Pharmacie de Casablanca</strong><span>Lauréate de la faculté</span></div></div><div class="credential"><span class="check">✓</span><div><strong>Université Sorbonne – Paris</strong><span>Diplômée en Radiologie et Imagerie du Système Nerveux</span></div></div></div></div></div></section>
+<section class="section" id="parcours"><div class="container about-grid"><div class="about-visual"><img class="about-photo" src="unnamed%20(4).webp" alt="Espace de consultation du cabinet" loading="lazy" decoding="async"><div class="about-seal"><span>SL</span><small>NEUROCHIRURGIE<br>CASABLANCA</small></div><div class="about-quote"><p>Un espace de consultation à Casablanca.</p></div></div><div class="about-copy"><span class="kicker">Spécialité & diplômes</span><h2>Neurochirurgie · Formation médicale</h2><p>Conformément aux informations figurant sur la carte de visite du Dr Salma Lahlou, voici sa spécialité et les diplômes indiqués.</p><div class="credentials"><div class="credential"><span class="check">✓</span><div><strong>Spécialité : neurochirurgie</strong><span>Spécialiste en chirurgie du cerveau et des nerfs</span></div></div><div class="credential"><span class="check">✓</span><div><strong>Faculté de Médecine et de Pharmacie de Casablanca</strong><span>Lauréate de la faculté</span></div></div><div class="credential"><span class="check">✓</span><div><strong>Université Sorbonne – Paris</strong><span>Diplômée en Radiologie et Imagerie du Système Nerveux</span></div></div></div></div></div></section>
 <section class="section" id="cabinet"><div class="container"><div class="section-head"><span class="kicker">Informations pratiques</span><h2>Le cabinet à Casablanca</h2><p>Retrouvez les coordonnées du cabinet et préparez votre itinéraire avant votre consultation.</p></div><div class="visit-grid"><div class="visit-card"><h3>Coordonnées du cabinet</h3>
 <div class="detail-row"><span class="info-icon">⌖</span><div><strong>Adresse</strong><span>175 Rue Boukraa, Résidence Houssam Jassim<br>1er étage, appartement n° 5<br>Quartier Bourgogne, Casablanca</span></div></div>
 <div class="detail-row"><span class="info-icon">☎</span><div><strong>Téléphone</strong><a href="tel:+212522276634">+212 5 22 27 66 34</a><br><a href="tel:+212669630741">+212 6 69 63 07 41</a></div></div>
