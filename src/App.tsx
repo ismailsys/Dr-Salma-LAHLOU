@@ -28,7 +28,6 @@ const PHONE = "+212522276634";
 const WHATSAPP = "https://wa.me/212669630741?text=Bonjour%20Docteur%2C%20je%20souhaite%20me%20renseigner%20sur%20un%20rendez-vous.";
 const ADDRESS = "175 Rue Boukraa, Résidence Houssam Jassim, 1er étage, appartement n° 5, quartier Bourgogne, Casablanca";
 const MAPS = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(ADDRESS);
-const GOOGLE_PROFILE = "https://www.google.com/maps/place/Dr+Salma+Lahlou+-+Neurochirurgien+%C3%A0+Casablanca/data=!4m2!3m1!1s0x0:0x61a22c209fe4377d";
 
 const navigation = [
   { label: "Spécialités", href: "#expertise" },
