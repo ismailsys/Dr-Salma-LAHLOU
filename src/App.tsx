@@ -69,7 +69,7 @@ function Brand({ light = false }: { light?: boolean }) {
       <span className="brand-mark">
         <img
           className="brand-logo"
-          src={image("WhatsApp Image 2026-10-27 at 09.50.01.jpeg")}
+          src="https://raw.githubusercontent.com/ismailsys/Dr-Salma-LAHLOU/main/WhatsApp%20Image%202026-10-27%20at%2009.50.01.jpeg"
           alt=""
           decoding="async"
         />
