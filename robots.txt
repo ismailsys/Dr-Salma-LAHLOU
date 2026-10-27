@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ismailsys.github.io/Dr-Salma-LAHLOU/sitemap.xml
