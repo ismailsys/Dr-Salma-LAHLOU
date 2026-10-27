@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowUpRight, Brain, CalendarDays, Phone, ShieldCheck, Stethoscope } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Brain, Phone, ShieldCheck, Stethoscope } from "lucide-react";
 
 const BASE = import.meta.env.BASE_URL;
 const PHONE = "+212522276634";
