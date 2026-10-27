@@ -27,12 +27,13 @@ const PHONE = "+212522276634";
 const WHATSAPP = "https://wa.me/212669630741?text=Bonjour%20Docteur%2C%20je%20souhaite%20me%20renseigner%20sur%20un%20rendez-vous.";
 const ADDRESS = "175 Rue Boukraa, Résidence Houssam Jassim, 1er étage, appartement n° 5, quartier Bourgogne, Casablanca";
 const MAPS = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(ADDRESS);
+const GOOGLE_PROFILE = "https://www.google.com/maps/place/Dr+Salma+Lahlou+-+Neurochirurgien+%C3%A0+Casablanca/data=!4m2!3m1!1s0x0:0x61a22c209fe4377d";
 
 const navigation = [
-  { label: "Spécialité", href: "#expertise" },
-  { label: "Le cabinet", href: "#cabinet" },
-  { label: "Parcours", href: "#parcours" },
-  { label: "Questions", href: "#faq" }
+  { label: "Spécialités", href: "#expertise" },
+  { label: "Parcours patient", href: "#parcours-patient" },
+  { label: "Avis", href: "#avis" },
+  { label: "Le cabinet", href: "#cabinet" }
 ];
 
 function Reveal({
@@ -126,19 +127,22 @@ const expertise = [
     number: "01",
     icon: Brain,
     title: "Cerveau et crâne",
-    text: "Pour toute question concernant une pathologie cérébrale, contactez le cabinet afin de vérifier les possibilités de consultation."
+    text: "Informations générales sur les affections du cerveau et du crâne pouvant nécessiter un avis neurochirurgical.",
+    page: "cerveau.html"
   },
   {
     number: "02",
     icon: Stethoscope,
     title: "Colonne vertébrale et rachis",
-    text: "Contactez le cabinet pour savoir si votre motif de consultation concernant le rachis peut être pris en charge."
+    text: "Repères sur les douleurs et pathologies de la colonne vertébrale, à discuter avec un professionnel de santé.",
+    page: "rachis.html"
   },
   {
     number: "03",
     icon: ShieldCheck,
     title: "Neurochirurgie pédiatrique",
-    text: "Le cabinet pourra vous renseigner sur les modalités de consultation et confirmer si la prise en charge pédiatrique est proposée."
+    text: "Informations générales sur les situations neurochirurgicales de l’enfant ; contactez le cabinet pour confirmer les modalités de consultation.",
+    page: "pediatrie.html"
   }
 ];
 
@@ -326,7 +330,7 @@ export default function App() {
                       </div>
                       <h3>{item.title}</h3>
                       <p>{item.text}</p>
-                      <a href="#contact" className="card-link">Contacter le cabinet <ArrowRight size={15} /></a>
+                      <a href={`${BASE}pathologies/${item.page}`} className="card-link">Découvrir le domaine <ArrowRight size={15} /></a>
                     </article>
                   </Reveal>
                 );
@@ -390,6 +394,68 @@ export default function App() {
                 </Reveal>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section id="parcours-patient" className="section-block patient-journey-section">
+          <div className="page-container">
+            <Reveal>
+              <SectionHeading
+                eyebrow="Votre consultation"
+                title="Un parcours simple, à chaque étape."
+                description="Quelques repères pour préparer votre venue et faciliter les échanges avec le cabinet."
+              />
+            </Reveal>
+            <div className="journey-grid">
+              <Reveal>
+                <article className="journey-step">
+                  <span className="journey-number">01</span>
+                  <span className="journey-icon"><Phone size={21} /></span>
+                  <h3>Prendre contact</h3>
+                  <p>Appelez le cabinet pour vérifier les disponibilités et les modalités de rendez-vous.</p>
+                </article>
+              </Reveal>
+              <Reveal delay={0.08}>
+                <article className="journey-step">
+                  <span className="journey-number">02</span>
+                  <span className="journey-icon"><CalendarDays size={21} /></span>
+                  <h3>Préparer les documents</h3>
+                  <p>Rassemblez vos examens d’imagerie, comptes rendus, ordonnances et liste de traitements en cours.</p>
+                </article>
+              </Reveal>
+              <Reveal delay={0.16}>
+                <article className="journey-step">
+                  <span className="journey-number">03</span>
+                  <span className="journey-icon"><Stethoscope size={21} /></span>
+                  <h3>Échanger avec le médecin</h3>
+                  <p>Présentez vos questions et vos antécédents. Les décisions médicales se prennent avec le professionnel de santé.</p>
+                </article>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        <section id="avis" className="section-block reviews-section">
+          <div className="page-container reviews-layout">
+            <Reveal className="reviews-copy">
+              <span className="eyebrow">Avis et retours</span>
+              <h2>Consultez les avis à leur source.</h2>
+              <p>Pour préserver l’authenticité des témoignages, les avis publics sont consultables directement sur la fiche Google du Dr Salma Lahlou.</p>
+              <PrimaryLink href={GOOGLE_PROFILE} external>
+                <ArrowUpRight size={16} /> Voir la fiche Google
+              </PrimaryLink>
+            </Reveal>
+            <Reveal className="reviews-source-card" delay={0.1}>
+              <div className="reviews-source-top">
+                <span className="reviews-google-mark" aria-hidden="true">G</span>
+                <div><strong>Dr Salma Lahlou</strong><small>Neurochirurgien · Casablanca</small></div>
+                <BadgeCheck size={20} />
+              </div>
+              <div className="reviews-source-divider" />
+              <p>Retrouvez les commentaires, les notes et les informations publiés sur la fiche officielle, directement auprès de leur source.</p>
+              <a href={GOOGLE_PROFILE} target="_blank" rel="noopener noreferrer" className="reviews-source-link">Consulter les avis Google <ArrowRight size={15} /></a>
+              <small className="reviews-disclaimer">Aucune note ni aucun témoignage n’est reproduit ici sans vérification.</small>
+            </Reveal>
           </div>
         </section>
 
