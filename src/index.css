@@ -393,3 +393,38 @@ section[id] { scroll-margin-top: 104px; }
 @media (prefers-reduced-motion: reduce) {
   *,*::before,*::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+
+/* Sections inspirées des meilleures pratiques éditoriales médicales : parcours et avis à la source */
+.patient-journey-section { background: #f7f9fc; }
+.journey-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin-top: 38px; }
+.journey-step { position: relative; min-height: 255px; padding: 27px 25px 25px; border: 1px solid #e0e7f0; border-radius: 18px; background: #fff; transition: transform .25s,border-color .25s,box-shadow .25s; }
+.journey-step:hover { transform: translateY(-4px); border-color: #c7d8e9; box-shadow: var(--shadow-card); }
+.journey-number { position: absolute; top: 24px; right: 24px; color: #9eafc2; font-family: var(--font-display); font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+.journey-icon { display: grid; width: 48px; height: 48px; place-items: center; border: 1px solid #dce6f1; border-radius: 15px; color: var(--blue); background: #eff4fa; }
+.journey-step h3 { margin: 24px 0 10px; color: #1a3b61; font-family: var(--font-display); font-size: 18px; letter-spacing: -.035em; }
+.journey-step p { margin: 0; color: #718095; font-size: 12px; line-height: 1.85; }
+.reviews-section { background: #fff; }
+.reviews-layout { display: grid; grid-template-columns: 1fr .9fr; align-items: center; gap: clamp(45px,8vw,105px); }
+.reviews-copy h2 { max-width: 520px; margin: 17px 0 17px; color: var(--navy-deep); font-family: var(--font-display); font-size: clamp(32px,3.8vw,46px); font-weight: 700; letter-spacing: -.06em; line-height: 1.12; }
+.reviews-copy > p { max-width: 480px; margin: 0 0 25px; color: var(--muted); font-size: 13px; line-height: 1.9; }
+.reviews-source-card { padding: clamp(23px,3.2vw,34px); border: 1px solid #e0e7f0; border-radius: 21px; background: linear-gradient(145deg,#fff,#f7f9fc); box-shadow: 0 14px 38px rgba(17,48,86,.06); }
+.reviews-source-top { display: flex; align-items: center; gap: 13px; }
+.reviews-google-mark { display: grid; width: 44px; height: 44px; flex: 0 0 auto; place-items: center; border: 1px solid #e0e7f0; border-radius: 14px; color: #4285f4; background: #fff; font-family: Arial,sans-serif; font-size: 25px; font-weight: 800; }
+.reviews-source-top > div { display: flex; flex: 1; flex-direction: column; gap: 4px; }
+.reviews-source-top strong { color: #1b3a5c; font-family: var(--font-display); font-size: 13px; }
+.reviews-source-top small { color: #77879a; font-size: 10px; }
+.reviews-source-top > svg { color: #7898bb; }
+.reviews-source-divider { height: 1px; margin: 23px 0; background: #e4ebf3; }
+.reviews-source-card > p { margin: 0 0 19px; color: #66788d; font-size: 12px; line-height: 1.9; }
+.reviews-source-link { display: inline-flex; align-items: center; gap: 9px; color: var(--navy); font-size: 12px; font-weight: 800; }
+.reviews-source-link svg { transition: transform .2s; }
+.reviews-source-link:hover svg { transform: translateX(3px); }
+.reviews-disclaimer { display: block; margin-top: 21px; color: #8a98a8; font-size: 10px; line-height: 1.7; }
+@media (max-width: 760px) {
+  .journey-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 27px; }
+  .journey-step { min-height: 0; padding: 22px; }
+  .journey-step h3 { margin-top: 18px; }
+  .reviews-layout { grid-template-columns: 1fr; gap: 29px; }
+  .reviews-copy h2 { font-size: clamp(30px,8vw,39px); }
+}
