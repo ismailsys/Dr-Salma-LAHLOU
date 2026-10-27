@@ -444,60 +444,37 @@ export default function App() {
             <Reveal>
               <div className="reviews-heading-row">
                 <SectionHeading
-                  eyebrow="Avis patients"
-                  title="L’écoute et la confiance au cœur des échanges."
-                  description="Découvrez une sélection de commentaires publiés par des patients sur DabaDoc. Les extraits ci-dessous sont attribués à leurs auteurs tels qu’affichés sur la plateforme."
+                  eyebrow="Avis Google"
+                  title="La confiance se construit dans chaque échange."
+                  description="Retrouvez les évaluations et les commentaires directement sur la fiche Google du cabinet. Les avis affichés sur Google restent la source de référence."
                 />
-                <a className="text-link reviews-all-link" href="https://www.dabadoc.com/ma/neurochirurgien/casablanca/salma-lahlou-1" target="_blank" rel="noopener noreferrer">
-                  Tous les avis sur DabaDoc <ArrowUpRight size={16} />
+                <a className="text-link reviews-all-link" href="https://www.google.com/maps/place/?q=place_id:ChIJbz3vmzfTpw0RfTfknyAsomE" target="_blank" rel="noopener noreferrer">
+                  Lire les avis sur Google <ArrowUpRight size={16} />
                 </a>
               </div>
             </Reveal>
-            <div className="reviews-grid">
-              <Reveal>
-                <article className="patient-review-card">
-                  <Quote className="review-quote-icon" size={25} aria-hidden="true" />
-                  <p className="patient-review-quote">« Très humaine à l’écoute et rassurante. »</p>
-                  <div className="patient-review-footer">
-                    <span className="review-avatar">DF</span>
-                    <span><strong>Dounia F.</strong><small>Avis publié sur DabaDoc</small></span>
-                  </div>
-                </article>
-              </Reveal>
-              <Reveal delay={0.06}>
-                <article className="patient-review-card">
-                  <Quote className="review-quote-icon" size={25} aria-hidden="true" />
-                  <p className="patient-review-quote">« Médecin ponctuelle à l’écoute adorable. Très belle expérience. Compétente. »</p>
-                  <div className="patient-review-footer">
-                    <span className="review-avatar">WA</span>
-                    <span><strong>Wydad A.</strong><small>Avis publié sur DabaDoc</small></span>
-                  </div>
-                </article>
-              </Reveal>
-              <Reveal delay={0.12}>
-                <article className="patient-review-card">
-                  <Quote className="review-quote-icon" size={25} aria-hidden="true" />
-                  <p className="patient-review-quote">« Docteur très compétente, humaine et minimaliste en médicament. Elle a beaucoup de proximité avec le patient, prend son temps pour expliquer et diagnostiquer. Son assistante est agréable aussi. Je recommande. »</p>
-                  <div className="patient-review-footer">
-                    <span className="review-avatar">AM</span>
-                    <span><strong>Aabir M.</strong><small>Avis publié sur DabaDoc</small></span>
-                  </div>
-                </article>
-              </Reveal>
-              <Reveal delay={0.18}>
-                <article className="patient-review-card">
-                  <Quote className="review-quote-icon" size={25} aria-hidden="true" />
-                  <p className="patient-review-quote">« Très ponctuelle, professionnelle et attentive. Je la recommande fortement. »</p>
-                  <div className="patient-review-footer">
-                    <span className="review-avatar">YM</span>
-                    <span><strong>Yassine M.</strong><small>Avis publié sur DabaDoc</small></span>
-                  </div>
-                </article>
-              </Reveal>
+            <div className="google-review-summary">
+              <article className="patient-review-card google-review-summary-card">
+                <Quote className="review-quote-icon" size={34} aria-hidden="true" />
+                <div className="google-rating-line">
+                  <strong className="google-rating-score">5,0</strong>
+                  <span className="google-rating-stars" aria-label="Note Google : 5 sur 5">★★★★★</span>
+                  <span className="google-rating-scale">sur 5</span>
+                </div>
+                <p className="patient-review-quote">Les avis patients et leurs commentaires sont consultables sur la fiche Google officielle du cabinet.</p>
+                <div className="patient-review-footer">
+                  <span className="review-avatar google-review-avatar">G</span>
+                  <span><strong>Dr Salma Lahlou</strong><small>Profil d’établissement Google · Casablanca</small></span>
+                  <span className="google-review-count">171 avis</span>
+                </div>
+                <a className="google-review-card-link" href="https://www.google.com/maps/place/?q=place_id:ChIJbz3vmzfTpw0RfTfknyAsomE" target="_blank" rel="noopener noreferrer">
+                  Consulter les avis authentiques <ArrowRight size={16} />
+                </a>
+              </article>
             </div>
             <div className="reviews-footnote">
-              <span>Source : DabaDoc</span>
-              <a href="https://www.dabadoc.com/ma/neurochirurgien/casablanca/salma-lahlou-1" target="_blank" rel="noopener noreferrer">Consulter la fiche et les avis complets <ArrowRight size={15} /></a>
+              <span>Source : fiche Google Business Profile. Note et volume d’avis observés lors de la dernière vérification ; ils peuvent évoluer.</span>
+              <a href="https://www.google.com/maps/place/?q=place_id:ChIJbz3vmzfTpw0RfTfknyAsomE" target="_blank" rel="noopener noreferrer">Ouvrir la fiche Google <ArrowUpRight size={15} /></a>
             </div>
           </div>
         </section>
