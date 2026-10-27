@@ -66,9 +66,13 @@ function Reveal({
 function Brand({ light = false }: { light?: boolean }) {
   return (
     <a className={`brand-link ${light ? "brand-link-light" : ""}`} href="#accueil" aria-label="Dr Salma Lahlou — accueil">
-      <span className="brand-mark" aria-hidden="true">
-        <Brain size={25} strokeWidth={1.55} />
-        <span className="brand-dot" />
+      <span className="brand-mark">
+        <img
+          className="brand-logo"
+          src={image("WhatsApp Image 2026-10-27 at 09.50.01.jpeg")}
+          alt=""
+          decoding="async"
+        />
       </span>
       <span className="brand-copy">
         <strong>Dr Salma Lahlou</strong>
