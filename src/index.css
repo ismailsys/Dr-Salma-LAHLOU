@@ -675,3 +675,19 @@ section[id] { scroll-margin-top: 104px; }
   .google-review-summary-card .patient-review-quote { font-size: 17px; }
   .google-review-count { margin-left: 0; width: 100%; }
 }
+
+
+/* Review cards styled after the supplied screenshot */
+.reference-review-card { min-height: 255px; padding: clamp(24px,3vw,34px); border-radius: 23px; background: #f7f9fc; box-shadow: 0 16px 40px rgba(36,73,126,.11); }
+.reference-review-card .review-quote-icon { color: #c8d8f2; opacity: 1; width: 43px; height: 43px; }
+.reference-review-card .patient-review-quote { margin: 20px 0 26px; color: #152b44; font-family: Arial,sans-serif; font-size: clamp(17px,1.55vw,22px); font-weight: 400; letter-spacing: 0; line-height: 1.75; }
+.reference-review-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; margin-top: auto; }
+.reference-review-footer > div { display: flex; flex-direction: column; gap: 5px; }
+.reference-review-footer strong { color: #142c48; font-size: 16px; }
+.reference-review-footer small { color: #6c7f96; font-size: 13px; }
+.reference-review-stars { color: #fbbc04; font-family: Arial,sans-serif; font-size: 22px; letter-spacing: 1px; white-space: nowrap; }
+@media (max-width: 760px) {
+ .reference-review-card { min-height: 0; padding: 23px; }
+ .reference-review-card .patient-review-quote { font-size: 17px; line-height: 1.7; }
+ .reference-review-footer { align-items: flex-start; flex-direction: column; gap: 10px; }
+}
