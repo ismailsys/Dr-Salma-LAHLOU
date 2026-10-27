@@ -468,3 +468,135 @@ section[id] { scroll-margin-top: 104px; }
   .specialty-page-shell .header-inner { gap: 12px; }
   .specialty-page-shell .header-inner > .button { padding-inline: 12px; font-size: 10px; }
 }
+
+
+/* Typography and component scale tuned to the more readable reference site */
+:root {
+  --container: 1200px;
+}
+.utility-bar { font-size: 12px; }
+.utility-inner { min-height: 40px; }
+.header-inner { min-height: 88px; }
+.brand-mark { width: 50px; height: 50px; }
+.brand-copy strong { font-size: 16px; }
+.brand-copy small { font-size: 10px; }
+.primary-navigation { gap: clamp(18px, 2.4vw, 34px); }
+.primary-navigation > a:not(.button) { font-size: 14px; }
+.button { min-height: 52px; padding-inline: 23px; font-size: 14px; }
+.hero-section, .hero-layout { min-height: 680px; }
+.hero-content h1 { font-size: clamp(46px, 5.3vw, 72px); }
+.hero-content h1 span { font-size: clamp(31px, 3.3vw, 45px); }
+.hero-description { font-size: 17px; line-height: 1.8; }
+.hero-kicker, .eyebrow { font-size: 11px; }
+.hero-reassurance strong { font-size: 13px; }
+.hero-reassurance small { font-size: 12px; }
+.portrait-frame { height: 510px; }
+.quick-facts-grid { padding-block: 30px; }
+.quick-fact { gap: 16px; }
+.quick-fact-icon { width: 48px; height: 48px; }
+.fact-label { font-size: 10px; }
+.quick-fact strong, .quick-fact a { font-size: 14px; }
+.section-block { padding-block: 108px; }
+.section-heading h2, .training-copy h2, .faq-intro h2, .closing-copy h2 {
+  font-size: clamp(34px, 3.8vw, 48px);
+}
+.section-heading p { font-size: 16px; line-height: 1.8; }
+.expertise-section .section-heading { margin-bottom: 48px; }
+.expertise-grid { gap: 20px; }
+.expertise-card { min-height: 315px; padding: 30px 30px 27px; border-radius: 22px; }
+.expertise-icon { width: 52px; height: 52px; }
+.expertise-card h3 { font-size: 22px; }
+.expertise-card p { font-size: 15px; line-height: 1.8; }
+.card-link, .text-link { font-size: 13px; }
+.medical-note { font-size: 13px; }
+.training-copy h2 { font-size: clamp(36px, 3.7vw, 47px); }
+.training-intro { font-size: 16px; line-height: 1.85; }
+.credential-row { padding: 17px 13px; gap: 15px; }
+.credential-row strong { font-size: 14px; }
+.credential-row p { font-size: 13px; }
+.training-image-caption { font-size: 16px; }
+.gallery-heading-row .section-heading h2 { font-size: clamp(32px, 3.5vw, 44px); }
+.gallery-grid { gap: 20px; }
+.gallery-card img { height: 290px; }
+.gallery-card figcaption { min-height: 64px; font-size: 13px; padding: 15px 18px; }
+.contact-panel-heading h3 { font-size: 20px; }
+.contact-panel address { font-size: 15px; line-height: 1.8; }
+.contact-detail a { font-size: 14px; }
+.contact-detail p { font-size: 13px; }
+.map-frame, .map-frame iframe { min-height: 490px; }
+.faq-intro > p { font-size: 15px; }
+.faq-item summary { min-height: 74px; font-size: 15px; }
+.faq-item p { font-size: 14px; line-height: 1.85; }
+.closing-copy p { font-size: 15px; }
+.footer-brand-area > p { font-size: 13px; }
+.footer-contact > a, .footer-nav > a { font-size: 13px; }
+.footer-label { font-size: 10px; }
+.footer-bottom { font-size: 11px; }
+.reviews-copy h2 { font-size: clamp(34px, 3.8vw, 48px); }
+.reviews-copy p { font-size: 16px; line-height: 1.8; }
+.reviews-source-card p { font-size: 15px; line-height: 1.8; }
+.reviews-source-top strong { font-size: 15px; }
+.reviews-source-top small, .reviews-disclaimer { font-size: 12px; }
+.reviews-source-link { font-size: 14px; }
+
+@media (max-width: 1000px) {
+  .primary-navigation { gap: 14px; }
+  .primary-navigation > a:not(.button) { font-size: 12px; }
+  .hero-section, .hero-layout { min-height: 630px; }
+  .hero-content h1 { font-size: clamp(43px, 5.3vw, 60px); }
+  .portrait-frame { height: 460px; }
+  .expertise-card { padding: 24px; }
+  .expertise-card h3 { font-size: 20px; }
+  .expertise-card p { font-size: 14px; }
+}
+@media (max-width: 760px) {
+  .utility-inner { min-height: 35px; }
+  .header-inner { min-height: 74px; }
+  .brand-copy strong { font-size: 14px; }
+  .brand-copy small { font-size: 8px; }
+  .primary-navigation > a:not(.button) { font-size: 15px; }
+  .hero-layout { min-height: 0; padding-block: 48px 58px; }
+  .hero-content h1 { font-size: clamp(40px, 10vw, 58px); }
+  .hero-content h1 span { font-size: clamp(29px, 7.2vw, 39px); }
+  .hero-description { font-size: 16px; line-height: 1.8; }
+  .hero-kicker, .eyebrow { font-size: 10px; }
+  .button { min-height: 49px; padding-inline: 17px; font-size: 12px; }
+  .hero-reassurance strong { font-size: 12px; }
+  .hero-reassurance small { font-size: 11px; }
+  .quick-facts-grid { grid-template-columns: 1fr; gap: 0; padding-block: 12px; }
+  .quick-fact { padding: 14px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .quick-fact:last-child { border-bottom: 0; }
+  .quick-fact strong, .quick-fact a { font-size: 14px; }
+  .section-block { padding-block: 72px; }
+  .section-heading h2, .training-copy h2, .faq-intro h2, .closing-copy h2,
+  .reviews-copy h2 { font-size: clamp(31px, 8vw, 39px); }
+  .section-heading p, .training-intro, .reviews-copy p { font-size: 15px; line-height: 1.8; }
+  .expertise-grid { grid-template-columns: 1fr; gap: 14px; }
+  .expertise-card { min-height: 0; padding: 24px; }
+  .expertise-card h3 { margin-top: 20px; font-size: 21px; }
+  .expertise-card p { font-size: 15px; }
+  .medical-note { align-items: flex-start; font-size: 12px; line-height: 1.7; }
+  .training-layout { gap: 30px; }
+  .training-image { min-height: 380px; }
+  .credential-row strong { font-size: 14px; }
+  .credential-row p { font-size: 13px; }
+  .gallery-heading-row { align-items: flex-start; flex-direction: column; gap: 16px; }
+  .gallery-grid { grid-template-columns: 1fr; gap: 15px; }
+  .gallery-card img { height: 250px; }
+  .gallery-card figcaption { font-size: 13px; }
+  .contact-layout { grid-template-columns: 1fr; }
+  .contact-panel address { font-size: 14px; }
+  .map-frame, .map-frame iframe { min-height: 350px; }
+  .faq-layout { gap: 25px; }
+  .faq-intro { position: static; }
+  .faq-item summary { min-height: 66px; font-size: 14px; }
+  .faq-item p { font-size: 14px; }
+  .closing-inner { align-items: flex-start; flex-direction: column; gap: 25px; }
+  .closing-copy p { font-size: 14px; }
+  .footer-main { grid-template-columns: 1fr; gap: 28px; }
+  .footer-brand-area > p { font-size: 13px; }
+  .footer-contact > a, .footer-nav > a { font-size: 13px; }
+  .footer-bottom { align-items: flex-start; flex-direction: column; justify-content: center; padding-block: 15px; font-size: 10px; }
+  .reviews-copy p, .reviews-source-card p { font-size: 15px; }
+  .reviews-source-top strong { font-size: 14px; }
+}
