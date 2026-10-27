@@ -35,6 +35,14 @@ export default defineConfig({
     outDir: "dist",
     emptyOutDir: true,
     sourcemap: false,
-    cssMinify: true
+    cssMinify: true,
+    rollupOptions: {
+      input: {
+        main: resolve(process.cwd(), "index.html"),
+        cerveau: resolve(process.cwd(), "pathologies/cerveau.html"),
+        rachis: resolve(process.cwd(), "pathologies/rachis.html"),
+        pediatrie: resolve(process.cwd(), "pathologies/pediatrie.html")
+      }
+    }
   }
 });
