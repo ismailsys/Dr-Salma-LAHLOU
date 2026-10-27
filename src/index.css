@@ -600,3 +600,32 @@ section[id] { scroll-margin-top: 104px; }
   .reviews-copy p, .reviews-source-card p { font-size: 15px; }
   .reviews-source-top strong { font-size: 14px; }
 }
+
+
+/* Patient testimonials inspired by the reference site's review layout */
+.reviews-heading-row { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 34px; }
+.reviews-heading-row .section-heading { max-width: 730px; margin-bottom: 0; }
+.reviews-heading-row .section-heading h2 { max-width: 760px; }
+.reviews-heading-row .section-heading p { max-width: 700px; }
+.reviews-all-link { flex: 0 0 auto; margin-bottom: 8px; }
+.reviews-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+.patient-review-card { display: flex; min-height: 220px; flex-direction: column; align-items: flex-start; padding: clamp(23px,3vw,32px); border: 1px solid #e1e8f0; border-radius: 22px; background: linear-gradient(145deg,#fff,#f8fafd); box-shadow: 0 14px 38px rgba(17,48,86,.055); transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+.patient-review-card:hover { transform: translateY(-3px); border-color: #cbd9e9; box-shadow: 0 20px 44px rgba(17,48,86,.09); }
+.review-quote-icon { color: #6c8fb6; opacity: .8; }
+.patient-review-quote { flex: 1; margin: 17px 0 25px; color: #334a64; font-family: var(--font-display); font-size: clamp(16px,1.5vw,19px); font-weight: 600; letter-spacing: -.025em; line-height: 1.65; }
+.patient-review-footer { display: flex; align-items: center; gap: 12px; width: 100%; padding-top: 17px; border-top: 1px solid #e6ecf3; }
+.review-avatar { display: grid; width: 43px; height: 43px; flex: 0 0 auto; place-items: center; border: 1px solid #dbe5f0; border-radius: 50%; color: var(--navy); background: #edf3fa; font-size: 12px; font-weight: 800; }
+.patient-review-footer > span:last-child { display: flex; flex-direction: column; gap: 4px; }
+.patient-review-footer strong { color: #1b3a5c; font-size: 13px; }
+.patient-review-footer small { color: #7b8a9d; font-size: 11px; }
+.reviews-footnote { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 24px; color: #7a899b; font-size: 12px; }
+.reviews-footnote a { display: inline-flex; align-items: center; gap: 8px; color: var(--navy); font-weight: 800; }
+.reviews-footnote a svg { transition: transform .2s ease; }
+.reviews-footnote a:hover svg { transform: translateX(3px); }
+@media (max-width: 760px) {
+  .reviews-heading-row { align-items: flex-start; flex-direction: column; gap: 17px; margin-bottom: 25px; }
+  .reviews-grid { grid-template-columns: 1fr; gap: 13px; }
+  .patient-review-card { min-height: 0; padding: 23px; }
+  .patient-review-quote { font-size: 17px; }
+  .reviews-footnote { align-items: flex-start; flex-direction: column; }
+}
