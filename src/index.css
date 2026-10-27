@@ -650,3 +650,28 @@ section[id] { scroll-margin-top: 104px; }
   height: 100%;
   object-fit: contain;
 }
+
+
+/* Google Business Profile reviews — visual treatment based on the supplied reference */
+.google-review-summary { display: grid; grid-template-columns: minmax(0, 780px); justify-content: center; }
+.google-review-summary-card { min-height: 0; padding: clamp(26px,4vw,42px); background: #f7f9fc; box-shadow: 0 16px 38px rgba(34,70,120,.11); }
+.google-review-summary-card .review-quote-icon { color: #c6d7f2; width: 42px; height: 42px; }
+.google-rating-line { display: flex; align-items: center; gap: 13px; margin-top: 20px; }
+.google-rating-score { color: #172f4c; font-family: var(--font-display); font-size: 38px; line-height: 1; letter-spacing: -.05em; }
+.google-rating-stars { color: #fbbc04; font-family: Arial,sans-serif; font-size: 27px; letter-spacing: 2px; white-space: nowrap; }
+.google-rating-scale { color: #718095; font-size: 13px; }
+.google-review-summary-card .patient-review-quote { margin: 21px 0 24px; color: #1e2f43; font-family: inherit; font-size: clamp(17px,1.7vw,21px); font-weight: 400; letter-spacing: 0; line-height: 1.75; }
+.google-review-summary-card .patient-review-footer { border-top: 0; padding-top: 0; }
+.google-review-avatar { border: 0; color: #4285f4; background: #fff; font-family: Arial,sans-serif; font-size: 23px; }
+.google-review-count { margin-left: auto; color: #66788d; font-size: 13px; white-space: nowrap; }
+.google-review-card-link { display: inline-flex; align-items: center; gap: 9px; align-self: flex-start; margin-top: 22px; color: #244e7d; font-size: 13px; font-weight: 800; }
+.google-review-card-link svg { transition: transform .2s ease; }
+.google-review-card-link:hover svg { transform: translateX(3px); }
+@media (max-width: 760px) {
+  .google-review-summary-card { padding: 24px; }
+  .google-rating-line { flex-wrap: wrap; gap: 9px; }
+  .google-rating-score { font-size: 34px; }
+  .google-rating-stars { font-size: 23px; }
+  .google-review-summary-card .patient-review-quote { font-size: 17px; }
+  .google-review-count { margin-left: 0; width: 100%; }
+}
