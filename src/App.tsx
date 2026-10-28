@@ -348,7 +348,7 @@ export default function App() {
           <div className="page-container training-layout">
             <Reveal className="training-image-column">
               <div className="training-image">
-                <img src={image("unnamed (4).webp")} alt="Espace de consultation du cabinet du Dr Salma Lahlou" loading="lazy" decoding="async" />
+                <img src={image("WhatsApp Image 2026-10-27 at 10.24.31.jpeg")} alt="Photo du parcours et de la formation médicale du Dr Salma Lahlou" loading="lazy" decoding="async" />
                 <div className="training-image-shade" />
                 <div className="training-image-badge"><span className="badge-monogram">SL</span><span><strong>Le cabinet</strong><small>Bourgogne · Casablanca</small></span></div>
                 <div className="training-image-caption">Un espace de consultation à Casablanca.</div>
