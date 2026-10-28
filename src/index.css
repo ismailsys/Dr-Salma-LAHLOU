@@ -691,3 +691,64 @@ section[id] { scroll-margin-top: 104px; }
  .reference-review-card .patient-review-quote { font-size: 17px; line-height: 1.7; }
  .reference-review-footer { align-items: flex-start; flex-direction: column; gap: 10px; }
 }
+
+
+/* Cohesive brand palette: deep navy, medical blue and soft blue-grey */
+:root {
+  --navy: #173a68;
+  --navy-deep: #102746;
+  --blue: #3b6f9f;
+  --mist: #eaf2fb;
+  --wash: #f3f7fc;
+  --muted: #5f7187;
+  --line: #d7e3f0;
+  --brand-blue-soft: #dce9f7;
+  --brand-steel: #8fa9c7;
+}
+
+/* Alternate section tones so the page feels designed, not monochrome */
+.quick-facts { background: #f0f5fb; border-color: #dce7f3; }
+.quick-fact-icon { color: #2d5d8d; border-color: #d3e1f0; background: #fff; }
+.expertise-section { background: linear-gradient(180deg,#fff 0%,#f7faff 100%); }
+.expertise-card { background: linear-gradient(155deg,#fff 0%,#f5f9fe 100%); border-color: #dce7f3; }
+.expertise-card:hover { border-color: #9fb9d7; }
+.expertise-icon { color: #2f6598; border-color: #d4e2f2; background: #eaf2fb; }
+.training-section { background: linear-gradient(135deg,#eaf2fb 0%,#f5f8fc 52%,#fff 100%); }
+.training-image { box-shadow: 0 24px 60px rgba(16,39,70,.13); }
+.credential-icon { color: #2f6598; background: #e8f0fa; border-color: #d4e2f2; }
+.gallery-section { background: #fff; }
+.gallery-card { border-color: #d9e5f2; box-shadow: 0 14px 38px rgba(23,58,104,.07); }
+.gallery-card figcaption { background: #f2f6fb; }
+.patient-journey-section { background: linear-gradient(135deg,#eaf2fb 0%,#f3f7fc 100%); }
+.journey-step { background: rgba(255,255,255,.88); border-color: #d3e1f0; }
+.journey-icon { color: #2f6598; border-color: #d3e1f0; background: #eaf2fb; }
+.reviews-section { background: linear-gradient(135deg,#f1f6fc 0%,#e7f0fa 100%); }
+.reference-review-card, .patient-review-card { background: rgba(255,255,255,.94); border-color: #d9e5f2; }
+.reference-review-card:hover, .patient-review-card:hover { border-color: #a7bfdc; box-shadow: 0 20px 44px rgba(23,58,104,.12); }
+.contact-section { background: linear-gradient(135deg,#fff 0%,#edf4fb 100%); }
+.contact-panel { border-color: #d5e2f0; background: rgba(255,255,255,.92); }
+.contact-symbol, .contact-detail-icon { color: #2f6598; background: #eaf2fb; border-color: #d6e3f1; }
+.faq-section { background: #f6f9fd; }
+.faq-item { border-color: #d9e5f2; background: #fff; }
+.faq-item[open] { border-color: #a9c0dc; background: #fdfefe; }
+.eyebrow { color: #3b6f9f; }
+.section-heading h2, .training-copy h2, .faq-intro h2 { text-wrap: balance; }
+.section-heading .eyebrow::before, .training-copy > .eyebrow::before, .faq-intro .eyebrow::before {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  margin: 0 9px 3px 0;
+  background: #7d9fc5;
+  content: "";
+}
+.specialty-hero { background: linear-gradient(125deg,#eaf2fb 0%,#f6f9fd 58%,#fff 100%); }
+.specialty-topic-card { border-color: #d9e5f2; background: linear-gradient(155deg,#fff,#f5f9fe); }
+.specialty-topic-card > span { color: #4e79a6; }
+.specialty-note { border-color: #d7e4f2; background: #edf4fb; }
+.closing-section { background: linear-gradient(115deg,#0d2441 0%,#173a68 55%,#32699e 100%); }
+.site-footer { background: #0b1e35; }
+
+@media (max-width: 760px) {
+  .quick-facts { background: #f1f6fc; }
+  .training-section, .patient-journey-section, .reviews-section, .contact-section { background: #f1f6fc; }
+}
