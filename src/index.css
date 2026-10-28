@@ -752,3 +752,56 @@ section[id] { scroll-margin-top: 104px; }
   .quick-facts { background: #f1f6fc; }
   .training-section, .patient-journey-section, .reviews-section, .contact-section { background: #f1f6fc; }
 }
+
+
+/* Stronger visual rhythm: clearly alternating brand-tinted section backgrounds */
+.quick-facts {
+  background: #e8f0fa;
+  border-top: 1px solid #d5e2f1;
+  border-bottom: 1px solid #d5e2f1;
+}
+.expertise-section { background: #ffffff; }
+.training-section {
+  background: linear-gradient(125deg, #e4edf8 0%, #edf3fa 48%, #f8fbff 100%);
+}
+.gallery-section { background: #ffffff; }
+.patient-journey-section {
+  background: linear-gradient(135deg, #dfeaf7 0%, #eaf2fb 58%, #f2f6fc 100%);
+}
+.reviews-section {
+  background: linear-gradient(135deg, #f0f5fb 0%, #e4edf8 100%);
+}
+.contact-section {
+  background: linear-gradient(125deg, #ffffff 0%, #edf4fb 100%);
+}
+.faq-section { background: #eaf1f9; }
+.closing-section {
+  background: linear-gradient(115deg, #0b203b 0%, #173a68 58%, #376b9d 100%);
+}
+.site-footer { background: #091a30; }
+
+/* Keep white cards legible against the stronger blue backgrounds */
+.journey-step,
+.reference-review-card,
+.patient-review-card,
+.contact-panel,
+.faq-item {
+  background-color: #ffffff;
+}
+.journey-step { border-color: #cfdeef; }
+.reference-review-card,
+.patient-review-card { border-color: #d5e1ef; }
+.quick-fact-icon,
+.expertise-icon,
+.journey-icon,
+.contact-symbol,
+.contact-detail-icon {
+  color: #2d5d8d;
+}
+@media (max-width: 760px) {
+  .training-section,
+  .patient-journey-section,
+  .reviews-section,
+  .faq-section { background: #eaf2fb; }
+  .contact-section { background: #f2f6fc; }
+}
