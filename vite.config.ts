@@ -11,6 +11,7 @@ function copyClinicAssets(): Plugin {
     "unnamed (2).webp",
     "unnamed (3).webp",
     "unnamed (4).webp",
+    "WhatsApp Image 2026-10-27 at 10.24.31.jpeg",
     "favicon.svg"
   ];
 
